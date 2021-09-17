@@ -2,26 +2,35 @@
   const advantages = [
       {
           imgURL: './assets/img/adv_1',
-          desc: 'Получать лучшие рецепты по разным категориям'
+          desc: 'Получать лучшие рецепты по разным категориям',
+          width: '338',
+          height: '341'
       },
 
       {
           imgURL: './assets/img/adv_2',
-          desc: 'Готовить без лишних усилий и делать из каждого дня не рутинный'
+          desc: 'Готовить без лишних усилий и делать из&nbsp;каждого&nbsp;дня не&nbsp;рутинный',
+          width: '403',
+          height: '338'
       },
 
       {
           imgURL: './assets/img/adv_3',
-          desc: 'Довольные члены семьи'
+          desc: 'Довольные<br>члены семьи',
+          width: '337',
+          height: '363'
       },
   ]
 
 section.advantages
   .cmn__wrapper.advantages__wrapper
-    h2.cmn__title Почему круто быть с нами:
-      .advantages-swiper-container 
-        .swiper-wrapper
-          each adv in advantages
-            .swiper-slide.advatages__item
-              img(src=adv.imgURL + '@1x.png' srcset=adv.imgURL + '@2x.png'  alt="Почему круто быть с нами:" width="338" height="341")
-              p.cmn__text= adv.desc
+    h2.cmn__title.advantages__title Почему круто быть с нами:
+    .advantages-swiper-container 
+      .swiper-wrapper
+        each adv in advantages
+          .swiper-slide.advantages__item
+            .advantages__item-header
+              img(src=adv.imgURL + '@1x.png' srcset=adv.imgURL + '@2x.png'  alt="Почему круто быть с нами:" width=adv.width height=adv.height)
+            p!= adv.desc
+
+      .advantages-swiper-pagination

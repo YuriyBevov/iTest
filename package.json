@@ -50,5 +50,7 @@
     "url": ""
   },
   "homepage": "",
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.7.5"
+  }
 }

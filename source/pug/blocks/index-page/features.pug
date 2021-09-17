@@ -2,27 +2,37 @@
   const features = [
       {
           text: 'Простые домашние рецепты',
-          icon: './assets/img/fea_1.png'
+          icon: '#icon-adv_1',
+          width: "80",
+          height: "62"
       },
 
       {
           text: 'Статьи о готовке',
-          icon: './assets/img/fea_2.png'
+          icon: '#icon-adv_2',
+          width: "72",
+          height: "71"
       },
 
       {
           text: 'Бесплатная книга рецептов всем подписчикам',
-          icon: './assets/img/fea_3.png'
+          icon: '#icon-adv_3',
+          width: "51",
+          height: "66"
       },
 
       {
-          text: 'Собирайте рецепты в recipe box',
-          icon: './assets/img/fea_4.png'
+          text: 'Собирайте рецепты в&nbsp;recipe&nbsp;box',
+          icon: '#icon-adv_4',
+          width: "54",
+          height: "60"
       },
 
       {
           text: 'Печать рецептов',
-          icon: './assets/img/fea_5.png'
+          icon: '#icon-adv_5',
+          width: "62",
+          height: "60"
       }
   ]
 
@@ -32,6 +42,10 @@ section.features
       .swiper-wrapper
         each fea in features
           .swiper-slide.features__item
-            img(src=fea.icon alt=fea.text)
-            p.cmn__text.features__desc= fea.text
+            .features__item-header
+              svg(width=fea.width height=fea.height)
+                use(xlink:href=fea.icon)
+            p.features__desc!= fea.text
+
+      .features-swiper-pagination
       

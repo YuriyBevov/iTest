@@ -3,36 +3,41 @@
       {
           text: 'После того, как стал участником проекта Tastycookery получает много простых рецептов, о которых раньше не задумывался, стал готовить некоторые, семья рада, стали больше разговаривать во время ужина и хвалить кулинарные таланты Человека1.',
           userName: 'Дейнерис',
-          userAge: 56,
+          userAge: '56 лет',
           avatarURL: './assets/img/user_1',
       },
 
       {
           text: 'Рад, что благодаря простым рецептам может наслаждаться изысканными блюдами, тратя на приготовление 20 мин в день',
           userName: 'Тайвин',
-          userAge: 43,
+          userAge: '43 лет',
           avatarURL: './assets/img/user_2',
       },
 
       {
-          text: 'Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что полностью отказалась от офисной неполезной еды и за 2 месяца похудела на 3 кг. И очень рекомендует всем использовать рецепты с сайта',
+          text: 'Довольна, что благодаря рецептам с TC может на работу брать полезные обеды, что&nbsp;полностью отказалась от офисной неполезной еды и за 2 месяца похудела на&nbsp;3&nbsp;кг. И очень рекомендует всем использовать рецепты с сайта',
           userName: 'Серсея',
-          userAge: 56,
+          userAge: '56 лет',
           avatarURL: './assets/img/user_3',
       },
   ]
 
 
 section.reviews
-  .cmn__wrapper.reviews__wrapper
-    h2.cmn__title Почему круто быть с нами:
-      .reviews-swiper-container 
+  .cmn__wrapper
+    .reviews__wrapper
+      h2.cmn__title.reviews__title Отзывы довольных пользователей
+      .reviews-swiper-container
         .swiper-wrapper
           each rev in reviews
             .swiper-slide.reviews__item
-              .review__content
-                p.cmn__text= rev.text
-              .review__info  
-                img(src=rev.avatarURL + '@1x.png' srcset=rev.avatarURL + '@2x.png'  alt="Почему круто быть с нами:" width="338" height="341")
-                span.review__info-name= rev.userName
-                span.review__info-age= rev.userAge
+              .reviews__content
+                p!= rev.text
+              .reviews__user
+                
+                img(src=rev.avatarURL + '@1x.png' srcset=rev.avatarURL + '@2x.png'  alt="Почему круто быть с нами:" width="96" height="96")
+                .reviews__user-info
+                  span.reviews__user-name= rev.userName
+                  span.reviews__user-age= rev.userAge
+        
+        .reviews-swiper-pagination

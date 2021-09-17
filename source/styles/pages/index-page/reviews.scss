@@ -1,0 +1,128 @@
+.reviews {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    
+    &__wrapper {
+        padding: 0 4.5rem;
+
+        @media(max-width: $tablet_width) {
+            padding: 0;
+        }
+    }
+
+    &-swiper-container {
+        overflow: hidden;
+
+        @media(max-width: $desktop-md_width) {
+            width: 70rem;
+            margin: 0 auto;
+        }
+
+        @media(max-width: $tablet_width) {
+            max-width: 32rem;
+        }
+
+        @media(max-width: 369px) {
+            max-width: 29rem;
+        }
+    }
+
+
+    @media(min-width: $desktop-md_width) {
+        & .swiper-wrapper {
+            transform: initial !important;
+        }
+
+        & .swiper-slide {
+            width: calc(100% / 3) !important;
+        }
+    }
+
+    .swiper__wrapper {
+        margin-bottom: 1rem;
+    }
+
+    &-swiper-pagination {
+        display: none;
+        justify-content: center;
+
+        @media(max-width: $desktop_md-width) {
+            display: flex;
+        }
+    }
+
+    &__title {
+        margin-bottom: 4rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: auto;
+        min-height: 26rem;
+        padding-left: 2rem;
+    }
+
+    &__content {
+        max-width: 32rem;
+        padding: 2rem;
+        padding-right: 1.5rem;
+        border: 1px solid #dcdcdc;
+        border-radius: 1.2rem;
+        margin-bottom: 4rem;
+        color: $col_black;
+
+        @media(max-width: 369px) {
+            max-width: 29rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: 400; 
+        }
+          
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+
+        img {
+            position: relative;
+            margin-right: 2.4rem;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                content: '';
+
+                width: 48px;
+                height: 48px;
+
+                border-radius: 50%;
+                background-color: rgb(0, 0, 0);
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-name {
+            font-size: 2rem;
+            font-family: $font_bold;
+        }
+
+        &-age {
+            font-family: $font_light;
+            font-size: 1.2rem;
+            color: #909090;
+        }
+    }
+      
+}

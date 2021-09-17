@@ -17,20 +17,6 @@
   font-size: 62.5%;
 }
 
-::-webkit-scrollbar { /* 1 - скроллбар */
-  width: 12px;
-  min-height: 8px;
-  background-color: red;
-}
-
-::-webkit-scrollbar-thumb { /* 5 - ползунок */
-  background-color: blue;
-}
-
-::-webkit-scrollbar-corner { /* 6 - уголок */
-  border-radius: 1rem;
-}
-
 html,
 body {
   padding: 0;
@@ -46,6 +32,10 @@ body {
   flex-direction: column;
   font-family: $font_reg, sans-serif;
   overflow-x: hidden;
+}
+
+main {
+  margin-top: -11.6rem;
 }
 
 footer {

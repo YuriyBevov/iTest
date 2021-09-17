@@ -1,3 +1,85 @@
 .footer {
-    
+    min-height: 58rem;
+    background-color: $col_pink;
+
+    &__wrapper {
+        min-height: inherit;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        max-width: 96rem;
+        margin: 0 auto;
+        margin-top: auto;
+
+        @media(max-width: $tablet_width) {
+            flex-direction: column;
+        }
+        
+        p {
+            max-width: 46rem;
+            margin-right: auto;
+            padding-right: 2rem;
+
+            @media(max-width: $tablet_width) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 38rem;
+
+            input {
+                font-size: 1.6rem;
+                margin-bottom: 2.5rem;
+                padding: 2.3rem 3rem;
+                border: 0;
+                border-radius: 1.2rem;
+                color: #909090;
+
+                &::placeholder {
+                    font-size: 1.6rem;
+                    color: #909090;  
+                }
+            }
+
+            button {
+                border: 0;
+                background-color: transparent;
+                width: 100%;
+
+                font-size: 2.4rem;
+                line-height: 2.6rem;
+                margin-bottom: 2rem;
+                min-height: 8rem;
+            }
+
+            small {
+                font-size: 1.4rem;
+                color: $col_white;
+
+                a {
+                    text-decoration: underline;
+                    color: $col_white;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        margin-top: auto;
+        small {
+            font-family: $font_light;
+            font-size: 1rem;
+            margin: 0 auto;
+            color: $col_white;
+        }
+    }
 }

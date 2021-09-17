@@ -1,8 +1,8 @@
 //fonts
 
-$font_reg: 'Circle-Regular';
-$font_light: 'Circle-Light';
-$font_bold: 'Circle-ExtraBold';
+$font_reg: 'Circe-Regular';
+$font_light: 'Circe-Light';
+$font_bold: 'Circe-ExtraBold';
 
 // animation
 
@@ -10,11 +10,12 @@ $tr_rules: 0.3s 0.1s ease;
 
 // widths
 
-$desktop_width: 1440px;
+$max_width: 1440px;
 
-$desktop_md-width: 1439px;
-$tablet_lg-width: 1139px;
-$tablet_width: 767px;
+$desktop-md_width: 1439px;
+$tablet-lg_width: 1139px;
+$tablet_width: 959px;
+$mobile-lg_width: 767px;
 $mobile_width: 534px;
 $min_width: 320px;
 
@@ -22,6 +23,9 @@ $min_width: 320px;
 
 $col_white: #ffffff;
 $col_black: #000000;
+$col_yellow: #ffdd0c;
+$col_gray: #ebebeb;
+$col_pink: #ea7f8c;
 
 // links
 
