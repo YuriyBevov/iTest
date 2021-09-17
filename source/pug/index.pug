@@ -1,0 +1,18 @@
+extends layouts/main-layout.pug
+
+block variables
+  -
+    const title = "iAge - тестовое задание"
+    const desc = "Тестовое задание"
+    const keywords = ""
+
+block content
+  
+  include ./blocks/index-page/intro
+  include ./blocks/index-page/features
+  include ./blocks/index-page/advantages
+  include ./blocks/index-page/subscribe
+  include ./blocks/index-page/reviews
+
+block modals
+  // include ./modals/{...}

@@ -1,0 +1,15 @@
+@mixin container() {
+    margin: 0 auto;
+    padding: 0 10rem;
+    width: 100%;
+    max-width: $max_width;
+    min-width: $min_width;
+
+    @media(max-width: $tablet-width) {
+        padding: 0 3rem;
+    }
+
+    @media(max-width: $mobile_width) {
+        padding: 0 0.5rem;
+    }
+}

@@ -1,0 +1,27 @@
+-
+  const advantages = [
+      {
+          imgURL: './assets/img/adv_1',
+          desc: 'Получать лучшие рецепты по разным категориям'
+      },
+
+      {
+          imgURL: './assets/img/adv_2',
+          desc: 'Готовить без лишних усилий и делать из каждого дня не рутинный'
+      },
+
+      {
+          imgURL: './assets/img/adv_3',
+          desc: 'Довольные члены семьи'
+      },
+  ]
+
+section.advantages
+  .cmn__wrapper.advantages__wrapper
+    h2.cmn__title Почему круто быть с нами:
+      .advantages-swiper-container 
+        .swiper-wrapper
+          each adv in advantages
+            .swiper-slide.advatages__item
+              img(src=adv.imgURL + '@1x.png' srcset=adv.imgURL + '@2x.png'  alt="Почему круто быть с нами:" width="338" height="341")
+              p.cmn__text= adv.desc
