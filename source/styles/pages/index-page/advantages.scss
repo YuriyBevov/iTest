@@ -22,18 +22,26 @@
         display: none;
         justify-content: center;
 
-        @media(max-width: $desktop_md-width) {
+        @media(max-width: $desktop-md_width) {
             display: flex;
         }
     }
 
     &__wrapper {
         padding-top: 1rem;
-        padding-bottom: 7rem;
+        padding-bottom: 6.3rem;
+
+        @media(max-width: $mobile_width) {
+            padding-bottom: 2.5rem;
+        }
     }
 
     &__title {
-        margin-bottom: 4rem;
+        margin-bottom: 2.5rem;
+
+        @media(max-width: $mobile_width) {
+            margin-bottom: 1.8rem;
+        }
     }
 
     &__item {
@@ -44,17 +52,24 @@
             justify-content: center;
             margin-bottom: 4rem;
 
-            // temp
             @media(max-width: $tablet_width) {
-                //min-height: initial;
+                width: 26rem;
+                margin: 0 auto;
+                min-height: 26rem;
+                margin-bottom: 2rem;
 
                 img {
-                    width: 236px;
-                    height: 254px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
 
-            
+            @media(max-width: $mobile_width) {
+                width: 236px;
+                min-height: 254px;
+                margin-bottom: 1.5rem;
+            }
         }
 
         p {

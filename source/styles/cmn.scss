@@ -18,9 +18,10 @@
 
     &__title {
         font-size: 4rem;
+        
         font-family: $font_bold;
         text-transform: uppercase;
-        line-height: 100%;
+        line-height: 1.2;
         text-align: center;
 
         @media(max-width: $tablet_width) {

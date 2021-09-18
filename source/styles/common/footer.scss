@@ -2,6 +2,10 @@
     min-height: 58rem;
     background-color: $col_pink;
 
+    @media(max-width: $tablet_width) {
+        min-height: 50rem;
+    }
+
     &__wrapper {
         min-height: inherit;
         display: flex;
@@ -12,20 +16,38 @@
         display: flex;
         width: 100%;
         max-width: 96rem;
-        margin: 0 auto;
-        margin-top: auto;
+        padding-top: 14.6rem;
+        margin-left: 7rem;
+        margin-bottom: auto;
+
+        @media(max-width: $desktop-md_width) {
+            margin: 0 auto auto;
+        }
 
         @media(max-width: $tablet_width) {
             flex-direction: column;
+            padding-top: 4.2rem;
+            margin-bottom: 7rem;
+        }
+
+        @media(max-width: $mobile_width) {
+            padding-top: 3.8rem;
+            margin-bottom: 3rem;
         }
         
         p {
             max-width: 46rem;
             margin-right: auto;
             padding-right: 2rem;
+            line-height: 120%;
 
             @media(max-width: $tablet_width) {
+                max-width: 100%;
                 margin-bottom: 2.5rem;
+            }
+
+            @media(max-width: $mobile_width) {
+                margin-bottom: 1.9rem;
             }
         }
 
@@ -33,14 +55,21 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            max-width: 38rem;
+            padding-left: 0.3rem;
+            margin-top: 0.3rem;
+            max-width: 373px;
+            margin-right: 7px;
+
+            @media(max-width: $tablet_width) {
+                margin: 0 auto;
+            }
 
             input {
                 font-size: 1.6rem;
-                margin-bottom: 2.5rem;
-                padding: 2.3rem 3rem;
+                padding: 2.1rem 3rem;
                 border: 0;
                 border-radius: 1.2rem;
+                margin-bottom: 2.7rem;
                 color: #909090;
 
                 &::placeholder {
@@ -74,10 +103,21 @@
 
     &__info {
         display: flex;
-        margin-top: auto;
+        margin-bottom: 1.7rem;
+
+        @media(max-width: $tablet_width) {
+            margin-top: auto;
+        }
+
+        @media(max-width: $mobile_width) {
+            margin-bottom: 2rem;
+        }
+
         small {
             font-family: $font_light;
             font-size: 1rem;
+            line-height: 1.2;
+            text-transform: uppercase;
             margin: 0 auto;
             color: $col_white;
         }

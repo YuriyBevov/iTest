@@ -12311,6 +12311,11 @@ if(fSlider) {
         },
 
         breakpoints: {
+            1440: {
+                slidesPerView: 5,
+                // freeMode: true
+            },
+
             960: {
                slidesPerView: 3,
             }

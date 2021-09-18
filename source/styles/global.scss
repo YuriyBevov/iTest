@@ -36,6 +36,10 @@ body {
 
 main {
   margin-top: -11.6rem;
+
+  @media(max-width: $mobile_width){
+    margin-top: -7.5rem;
+  }
 }
 
 footer {

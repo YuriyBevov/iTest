@@ -19,19 +19,43 @@
         justify-content: center;
         max-width: 60rem;
         min-height: inherit;
-        padding-top: 9rem;
+        padding-top: 7.6rem;
+
+        @media(max-width: $mobile_width){
+            justify-content: flex-start;
+            padding-top: 10rem;
+            align-items: center;
+        }
+        
     }
 
     &__title {
-        margin-bottom: 3.6rem;
+        margin-bottom: 1.6rem;
+
+        @media(max-width: $mobile_width){
+            text-align: center;
+            margin-bottom: 1.3rem;
+        }
     }
 
     &__desc {
-        margin-bottom: 4.5rem;
+        margin-bottom: 4rem;
+
+        @media(max-width: $mobile_width){
+            margin-bottom: auto;
+            text-align: center;
+        }
     }
 
     &__btn {
         font-size: 2rem;
         max-width: 33rem;
+        line-height: 1.2;
+        padding: 2rem;
+        padding-top: 2.3rem;
+
+        @media(max-width: $mobile_width){
+            margin-bottom: 5rem;
+        }
     }
 }

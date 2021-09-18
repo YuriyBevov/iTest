@@ -1,4 +1,12 @@
 .header {
     position: relative;
-    padding-top: 6rem;
+    padding-top: 5.8rem;
+
+    a {
+        display: block;
+    }
+
+    @media(max-width: $mobile_width){
+        padding-top: 2.3rem;
+    }
 }
