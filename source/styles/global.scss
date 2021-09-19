@@ -36,6 +36,7 @@ body {
 
 main {
   margin-top: -11.6rem;
+  overflow: hidden;
 
   @media(max-width: $mobile_width){
     margin-top: -7.5rem;
@@ -67,6 +68,19 @@ ul {
 
 a {
   text-decoration: none;
+  opacity: 1;
+  transition: opacity $tr_rules;
+
+  @media(min-width: $tablet_width) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }
 
 input, textarea {

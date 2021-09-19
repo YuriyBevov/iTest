@@ -29,8 +29,11 @@ section.advantages
       .swiper-wrapper
         each adv in advantages
           .swiper-slide.advantages__item
-            .advantages__item-header
-              img(src=adv.imgURL + '@1x.png' srcset=adv.imgURL + '@2x.png'  alt="Почему круто быть с нами:" width=adv.width height=adv.height)
+            .advantages__item-header(data-aos="fade-up" data-aos-delay="100")
+              
+              picture
+                source(type="image/webp" srcset=adv.imgURL + '@1x.webp 1x,' + adv.imgURL + '@2x.webp 2x')
+                img(src=adv.imgURL + '@1x.png' srcset=adv.imgURL + '@2x.png' alt="Почему круто быть с нами:" width=adv.width height=adv.height)
             p!= adv.desc
 
       .advantages-swiper-pagination

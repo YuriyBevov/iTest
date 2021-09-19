@@ -31,7 +31,7 @@ section.reviews
         .swiper-wrapper
           each rev in reviews
             .swiper-slide.reviews__item
-              .reviews__content
+              .reviews__content(data-aos="zoom-in" data-aos-delay="150")
                 p!= rev.text
               .reviews__user
                 

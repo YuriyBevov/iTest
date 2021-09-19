@@ -1,5 +1,36 @@
 section.intro
   .cmn__wrapper.intro__wrapper
+    .intro__background(aria-hidden="true")
+      #scene(data-relative-input="true")
+        picture(data-depth="0")
+          source(type="image/webp" srcset="./assets/img/woman@1x.webp")
+          img(src="./assets/img/woman@1x.png" alt="woman_bcg" width="501" height="964").intro__background-main
+
+      
+        .intro__background-item.js-parallax-item(data-depth="0.6")
+          picture
+            source(type="image/webp" srcset="./assets/img/1.webp")
+            img(src="./assets/img/1.png" alt="Элемент декора" width="1091" height="1326")
+
+        .intro__background-item.js-parallax-item(data-depth="0.4")
+          picture
+            source(type="image/webp" srcset="./assets/img/2.webp")
+            img(src="./assets/img/2.png" alt="Элемент декора" width="1067" height="1430")
+
+        .intro__background-item.js-parallax-item(data-depth="0.6")
+          picture
+            source(type="image/webp" srcset="./assets/img/3.webp")
+            img(src="./assets/img/3.png" alt="Элемент декора" width="805" height="601")
+        
+        .intro__background-item.js-parallax-item(data-depth="0.5")
+          picture
+            source(type="image/webp" srcset="./assets/img/4.webp")
+            img(src="./assets/img/4.png" alt="Элемент декора" width="1091" height="1326")     
+
+        .intro__background-item.js-parallax-item(data-depth="0.2")
+          picture
+            source(type="image/webp" srcset="./assets/img/5.webp")
+            img(src="./assets/img/5.png" alt="Элемент декора" width="1576" height="792")
     .intro__content
       h1.cmn__main-title.intro__title домашние Простые&nbsp;рецепты
       p.cmn__text.intro__desc Собирайте рецепты в recipe&nbsp;box

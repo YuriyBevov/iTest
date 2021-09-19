@@ -1,6 +1,9 @@
 .features {
     padding-top: 4.3rem;
     padding-bottom: 3.5rem;
+    position: relative;
+    z-index: 10;
+    background-color: $col_white;
 
     @media(max-width: $desktop-md_width) {
         padding-bottom: 9rem;

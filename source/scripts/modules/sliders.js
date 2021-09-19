@@ -1,11 +1,24 @@
 import Swiper, {Pagination} from 'swiper';
 Swiper.use([Pagination]);
 
+let isSlidersEnabled = false;
+
+const initSlider = (slider, windowWidth) => {
+    if(windowWidth > 1439 && isSlidersEnabled) {
+        slider.disable();
+        isSlidersEnabled = false;
+    } else if (windowWidth <= 1439 && !isSlidersEnabled) {
+        slider.enable();
+        isSlidersEnabled = true;
+    }
+}
+
 const fSlider = document.querySelector('.features-swiper-container');
 
 if(fSlider) {
     const slider = new Swiper(fSlider, {
         slidesPerView: 1,
+        disable: true,
 
         pagination: {
             el: ".features-swiper-pagination",
@@ -14,7 +27,6 @@ if(fSlider) {
         breakpoints: {
             1440: {
                 slidesPerView: 5,
-                // freeMode: true
             },
 
             960: {
@@ -23,21 +35,12 @@ if(fSlider) {
         }
     });
 
-    if(window.innerWidth > 1439) {
-        slider.disable();
-    } else {
-        slider.enable();
-    }
 
-    const onResizeInitSliders = () => {
-        if(window.innerWidth > 1439) {
-            slider.disable();
-        } else {
-            slider.enable();
-        }
-    }
+    initSlider(slider, window.innerWidth)
 
-    window.addEventListener('resize', onResizeInitSliders);
+    window.addEventListener('resize', () => {
+        initSlider(slider, window.innerWidth)
+    });
 }
 
 const aSlider = document.querySelector('.advantages-swiper-container');
@@ -45,27 +48,18 @@ const aSlider = document.querySelector('.advantages-swiper-container');
 if(aSlider) {
     const slider = new Swiper(aSlider, {
         slidesPerView: 1,
+        disable: true,
 
         pagination: {
             el: ".advantages-swiper-pagination",
         },
     });
 
-    if(window.innerWidth > 1439) {
-        slider.disable();
-    } else {
-        slider.enable();
-    }
+    initSlider(slider, window.innerWidth)
 
-    const onResizeInitSliders = () => {
-        if(window.innerWidth > 1439) {
-            slider.disable();
-        } else {
-            slider.enable();
-        }
-    }
-
-    window.addEventListener('resize', onResizeInitSliders);
+    window.addEventListener('resize', () => {
+        initSlider(slider, window.innerWidth)
+    });
 }
 
 const rSlider = document.querySelector('.reviews-swiper-container');
@@ -73,6 +67,7 @@ const rSlider = document.querySelector('.reviews-swiper-container');
 if(rSlider) {
     const slider = new Swiper(rSlider, {
         slidesPerView: 1,
+        disable: true,
 
         pagination: {
             el: ".reviews-swiper-pagination",
@@ -85,20 +80,10 @@ if(rSlider) {
         }
     });
 
-    if(window.innerWidth > 1439) {
-        slider.disable();
-    } else {
-        slider.enable();
-    }
+    initSlider(slider, window.innerWidth)
 
-    const onResizeInitSliders = () => {
-        if(window.innerWidth > 1439) {
-            slider.disable();
-        } else {
-            slider.enable();
-        }
-    }
-
-    window.addEventListener('resize', onResizeInitSliders);
+    window.addEventListener('resize', () => {
+        initSlider(slider, window.innerWidth)
+    });
 }
 

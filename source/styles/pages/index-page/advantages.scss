@@ -1,4 +1,7 @@
 .advantages {
+    position: relative;
+    z-index: 10;
+    background-color: $col_white;
 
     @media(min-width: $desktop-md_width) {
         & .swiper-wrapper {

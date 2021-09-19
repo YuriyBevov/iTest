@@ -6,7 +6,7 @@ $font_bold: 'Circe-ExtraBold';
 
 // animation
 
-$tr_rules: 0.3s 0.1s ease;
+$tr_rules: 0.2s ease;
 
 // widths
 
@@ -17,6 +17,7 @@ $tablet-lg_width: 1139px;
 $tablet_width: 959px;
 $mobile-lg_width: 767px;
 $mobile_width: 534px;
+$mobile-sm_width: 370px;
 $min_width: 320px;
 
 // colors
@@ -27,21 +28,7 @@ $col_yellow: #ffdd0c;
 $col_gray: #ebebeb;
 $col_pink: #ea7f8c;
 
-// links
-
-//btns
-
 // retina
 
 $retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;.Группа_17 {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 2464px;
-    height: 3724px;
-    z-index: 24;
-  }
-  
-  
-  
+$retina-dppx: 1.5dppx;

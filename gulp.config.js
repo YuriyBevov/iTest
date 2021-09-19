@@ -11,7 +11,7 @@ const PATHS = {
   images: {
     src: `${SOURCE_PATH}assets/img/**/*.{png,jpg,webp,svg}`,
     spriteSrc: `${SOURCE_PATH}assets/icons/icon-*.svg`,
-    webpSrc: `${SOURCE_PATH}assets/img/**/*.jpg`,
+    webpSrc: `${SOURCE_PATH}assets/img/**/*.{png,jpg}`,
     webpDest: `${SOURCE_PATH}assets/img`,
 
     dest: `${BUILD_PATH}assets/img`,

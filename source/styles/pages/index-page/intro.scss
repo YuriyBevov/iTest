@@ -1,19 +1,146 @@
+#scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    picture:first-child {
+        z-index: 9;
+    }
+}
+
 .intro {
-    /*background-image: url("../assets/img/intro@1x.jpg");
+    min-height: 60.5rem;
     background-size: cover;
-    background-position: center;*/
-    min-height: 60rem;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: $col_pink;
 
-    /*@media(max-width: $tablet_width) {
-        background-image: url("../assets/img/intro_mobile@1x.jpg");
-    } */
+    @media(max-width: $mobile_width) {
+        min-height: 60rem;
+    }
+
+    .webp & {
+        background-image: url("../assets/img/intro-bg@1x.webp");
+      
+        @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+          background-image: url("../assets/img/intro-bg@2x.webp");
+        }
+
+        @media(max-width: $mobile-sm_width) {
+            background-image: url("../assets/img/intro-bg_mobile@1x.webp");
+          
+            @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+              background-image: url("../assets/img/intro-bg_mobile@2x.webp");
+            }
+        }
+    }
+      
+    .no-webp & {
+        background-image: url("../assets/img/intro-bg@1x.png");
+      
+        @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+            background-image: url("../assets/img/intro-bg@2x.png");
+        }
+
+        @media(max-width: $mobile-sm_width) {
+            background-image: url("../assets/img/intro-bg_mobile@1x.png");
+          
+            @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+                background-image: url("../assets/img/intro-bg_mobile@2x.png");
+            }
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        @media(max-width: $mobile-sm_width) {
+            display: none;
+        }
+
+        &-main {
+            position: relative;
+            top: -11px;
+            left: 47%;
+            z-index: 9;
+
+            @media(max-width: $mobile_width) {
+                top: 162px;
+                left: 48%;
+                transform: translateX(-50%);
+                width: 316px;
+                height: 607px;
+            }
+        }
+
+        &-item {
+            position: absolute;
+            z-index: 0;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            &:nth-of-type(1) {
+                top: -17px !important;
+                left: -917px !important;
+                width: 1091px;
+                height: 1326px;
+            }
+
+            &:nth-of-type(2) {
+                top: 163px !important;
+                left: 392px !important;
+                width: 1067px;
+                height: 1430px;
+            }
+
+            &:nth-of-type(3) {
+                top: 204px !important;
+                left: initial !important;
+                right: 72px !important;
+                width: 805px;
+                height: 601px;
+            }
+
+            &:nth-of-type(4) {
+                top: -1188px !important;
+                left: initial !important;
+                right: -617px !important;
+                width: 1091px;
+                height: 1326px;
+            }
+
+            &:nth-of-type(5) {
+                top: 331px !important;
+                left: initial !important;
+                right: 58px !important;
+                width: 1576px;
+                height: 792px;
+                z-index: 10;
+            }
+        }
+    }
 
     &__wrapper {
         min-height: inherit;
     }
 
     &__content {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -27,6 +154,7 @@
             align-items: center;
         }
         
+        z-index: 100;
     }
 
     &__title {

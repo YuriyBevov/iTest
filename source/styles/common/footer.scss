@@ -1,15 +1,54 @@
 .footer {
     min-height: 58rem;
+    position: relative;
+    z-index: 10;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: $col_pink;
+    overflow: hidden;
 
     @media(max-width: $tablet_width) {
         min-height: 50rem;
+    }
+
+    .webp & {
+        background-image: url("../assets/img/footer-bg@1x.webp");
+      
+        @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+          background-image: url("../assets/img/footer-bg@2x.webp");
+        }
+
+        @media(max-width: $mobile-sm_width) {
+            background-image: url("../assets/img/footer-bg_mobile@1x.webp");
+          
+            @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+              background-image: url("../assets/img/footer-bg_mobile@2x.webp");
+            }
+        }
+    }
+      
+    .no-webp & {
+        background-image: url("../assets/img/footer-bg@1x.png");
+      
+        @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+            background-image: url("../assets/img/footer-bg@2x.png");
+        }
+
+        @media(max-width: $mobile-sm_width) {
+            background-image: url("../assets/img/footer-bg_mobile@1x.png");
+          
+            @media (min-resolution: $retina-dppx) and (min-resolution: $retina-dpi) {
+                background-image: url("../assets/img/footer-bg_mobile@2x.png");
+            }
+        }
     }
 
     &__wrapper {
         min-height: inherit;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
 
     &__content {
@@ -19,6 +58,7 @@
         padding-top: 14.6rem;
         margin-left: 7rem;
         margin-bottom: auto;
+        z-index: 100;
 
         @media(max-width: $desktop-md_width) {
             margin: 0 auto auto;
@@ -87,6 +127,20 @@
                 line-height: 2.6rem;
                 margin-bottom: 2rem;
                 min-height: 8rem;
+
+                opacity: 1;
+                transition: opacity $tr_rules;
+              
+                @media(min-width: $tablet_width) {
+                  &:hover,
+                  &:focus {
+                    opacity: 0.8;
+                  }
+              
+                  &:active {
+                    opacity: 0.6;
+                  }
+                }
             }
 
             small {
@@ -104,6 +158,7 @@
     &__info {
         display: flex;
         margin-bottom: 1.7rem;
+        z-index: 100;
 
         @media(max-width: $tablet_width) {
             margin-top: auto;

@@ -1,9 +1,11 @@
 .header {
     position: relative;
     padding-top: 5.8rem;
+    z-index: 1000;
 
     a {
         display: block;
+        width: fit-content;
     }
 
     @media(max-width: $mobile_width){
