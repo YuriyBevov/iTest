@@ -23,5 +23,5 @@ aos.js для анимаций по скроллу
 
 Проверки:
 
-Бэм-дерево, валидатор, кроссбраузерность в chrome, firefox, safari(iphone6), lighthouse.
+Бэм-дерево, валидатор, кроссбраузерность в chrome, firefox, safari(iphone6), lighthouse, pixilPerfect(в меру).
 
